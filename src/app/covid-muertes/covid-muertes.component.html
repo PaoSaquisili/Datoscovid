@@ -1,0 +1,36 @@
+<div class="row"> 
+    <div class="col-6">
+    <img class="card-img-top w-25 ml-3" src="https://cdn.pixabay.com/photo/2012/04/10/23/23/ecuador-26986_960_720.png" alt="Card image cap">
+        <hr/>
+        <div class="container"  >
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        Nombre Pais : {{datosPais.nombre}}
+                    </li>
+                    <li class="list-group-item">
+                        Abreviatura : {{datosPais.abreviatura}}
+                    </li>
+                    <li class="list-group-item">
+                        Capital : {{datosPais.capital}}
+                    </li>
+                    <li class="list-group-item">
+                        Poblacion : {{datosPais.poblacion}}
+                    </li>
+                    <li class="list-group-item">
+                        Localizacion : {{datosPais.localizacion}}
+                    </li>
+                </ul>
+        </div>
+    </div>
+    <div class="col-6">
+        <h4 class="mt-5 ml-3">Cantidad de muertes por Fecha</h4>
+        <div class="container">
+            <ul *ngFor="let items of resultadosApiCovid" class="list-group mt-4" >
+                
+                <li class="list-group-item text-uppercase">
+                  {{items}}
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
